@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Consolini Sud Enna</title>
+  <script defer src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div id="nav-menu-btn">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav id="nav-menu">
+    <a href="#about">About</a>
+    <a href="#calendar">Calendar</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+ <section id="section1">
+   <div class="container">
+        <img src="consolini.jpg" alt="Responsive Image" class="responsive-image">
+    </div>
+
+    <h1 id="about">Consolini Sud Enna</h1>
+    <p>Let's do THIS!</p>
+ </section>
+ <section id="section2">
+    <h1>Calendario della squadra</h1>
+    <div id="calendar"></div>
+ </section>
+ <section id="section3">
+    <h1 id="contact">Contattaci</h1>
+    <form id="contact-form" onsubmit="mailto:gaetanosmario@gmail.com" method="get">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Messaggio:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
+ </section>
+ <footer>
+    <p>Privacy Policy</p>
+    <p>IG: @consolinibasket</p>
+ </footer>
+ <script src="scripts.js"></script>
+ <script type="text/javascript">document.getElementById("nav-menu-btn").addEventListener("click", function() {
+  document.getElementById("nav-menu").classList.toggle("nav-active");
+});</script>
+</body>
+</html>
