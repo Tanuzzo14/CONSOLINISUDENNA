@@ -43,6 +43,9 @@ const nextGame = () => {
  }
  if (nextGame) {
  const daysUntil = Math.ceil((nextGame.date - today) / (1000 * 60 * 60 * 24));
+ if (daysUntil == 1) {
+  return `La prossima partita è domani! Arricampati! Giochiamo contro contro ${nextGame.opponent}`;
+ }
  return `La prossima partita è il ${nextGame.date.getDate()} ${months[nextGame.date.getMonth()]} contro ${nextGame.opponent} tra ${daysUntil} giorni.`;
  } else {
  return "Non ci sono partite in programma.";

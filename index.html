@@ -1,181 +1,261 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="zxx">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
+    <meta charset="UTF-8">
+    <meta name="description" content="Specer Template">
+    <meta name="keywords" content="Specer, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consolini Sud Enna</title>
 
-.fa:hover {
-    opacity: 0.7;
-}
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
 
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-   border-radius: 50%;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-google {
-  background: #dd4b39;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #f39f18;
-  color: white;
-   border-radius: 50%;
-}
-
-.fa-pinterest {
-  background: #cb2027;
-  color: white;
-}
-
-.fa-snapchat-ghost {
-  background: #fffc00;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.fa-skype {
-  background: #00aff0;
-  color: white;
-}
-
-.fa-android {
-  background: #a4c639;
-  color: white;
-}
-
-.fa-dribbble {
-  background: #ea4c89;
-  color: white;
-}
-
-.fa-vimeo {
-  background: #45bbff;
-  color: white;
-}
-
-.fa-tumblr {
-  background: #2c4762;
-  color: white;
-}
-
-.fa-vine {
-  background: #00b489;
-  color: white;
-}
-
-.fa-foursquare {
-  background: #45bbff;
-  color: white;
-}
-
-.fa-stumbleupon {
-  background: #eb4924;
-  color: white;
-}
-
-.fa-flickr {
-  background: #f40083;
-  color: white;
-}
-
-.fa-yahoo {
-  background: #430297;
-  color: white;
-}
-
-.fa-soundcloud {
-  background: #ff5500;
-  color: white;
-}
-
-.fa-reddit {
-  background: #ff5700;
-  color: white;
-}
-
-.fa-rss {
-  background: #ff6600;
-  color: white;
-}
-</style>
- <title>Consolini Sud Enna</title>
-  <script defer src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
- <link rel="stylesheet" href="styles.css">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
+
 <body>
-<header>
-  <div id="nav-menu-btn">
-    <i class="fas fa-bars"></i>
-  </div>
-  <nav id="nav-menu">
-    <a href="#about">About</a>
-    <a href="#calendar">Calendar</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
- <section id="section1">
-   <div class="container">
-        <img src="https://raw.githubusercontent.com/Tanuzzo14/Tanuzzo14.github.io/main/consolini.jpg" alt="Responsive Image" class="responsive-image">
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
     </div>
 
-    <h1 id="about">Consolini Sud Enna</h1>
-    <p>Let's do THIS!</p>
- </section>
- <section id="section2">
-    <h1>Calendario della squadra</h1>
-    <div id="calendar"></div>
- </section>
- <section id="section3">
-    <h1 id="contact">Contattaci</h1>
-    <form id="contact-form" onsubmit="mailto:gaetanosmario@gmail.com" method="get">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Messaggio:</label>
-      <textarea id="message" name="message" required></textarea>
-      <button type="submit">Invia</button>
-    </form>
- </section>
- <footer>
-    <p>Privacy Policy</p>
-      <a href="#https://www.facebook.com/consolinienna/?locale=it_IT" class="fa fa-instagram"></a>
-      <a href="#https://www.instagram.com/ssdconsolinienna/" class="fa fa-facebook"></a>
-      <a class="btn btn btn-social-icon" href="mailto:gaetanosmario@gmail.com"><i class="fa fa-envelope fa-lg"></i></a>
- </footer>
- <script src="scripts.js"></script>
- <script type="text/javascript">document.getElementById("nav-menu-btn").addEventListener("click", function() {
-  document.getElementById("nav-menu").classList.toggle("nav-active");
-});</script>
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="search-btn search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="header__top--canvas">
+            <div class="ht-links">
+                <a href="#https://www.facebook.com/consolinienna/?locale=it_IT"><i class="fa fa-facebook"></i></a>
+                <a href="#https://www.instagram.com/ssdconsolinienna/"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <ul class="main-menu mobile-menu">
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li><a href="#calendar">Calendario</a></li>
+            <li><a href="#">Pages</a>
+                <ul class="dropdown">
+                    <li><a href="#calendar">Calendario</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ht-links">
+                            <a href="#https://www.facebook.com/consolinienna/?locale=it_IT"><i class="fa fa-facebook"></i></a>
+                            <a href="#https://www.instagram.com/ssdconsolinienna/"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo">
+                            <a href="./index.html"><img src="https://raw.githubusercontent.com/Tanuzzo14/Tanuzzo14.github.io/main/consolini-removebg-preview.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="nav-menu">
+                            <ul class="main-menu">
+                                <li class="active"><a href="./index.html">Home</a></li>
+                                <li><a href="#calendar">Calendario</a></li>
+                                <li><a href="#">Pages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#calendar">Calendario</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="nm-right search-switch">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas-open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section set-bg" data-setbg="https://raw.githubusercontent.com/Tanuzzo14/Tanuzzo14.github.io/main/sfondo.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hs-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="hs-text">
+                                        <div class="vi-title"><h2 id="calendar"></h2></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Video Section Begin
+    <section class="video-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3>Hot <span>Videos</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="video-slider owl-carousel">
+                    <div class="col-lg-3">
+                        <div class="video-item set-bg" data-setbg="img/videos/video-1.jpg">
+                            <div class="vi-title">
+                                <h5>A World Of Infinite Opportunities</h5>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=dhYOPzcsbGM" class="play-btn video-popup"><img
+                                    src="img/videos/play.png" alt=""></a>
+                            <div class="vi-time">11:13</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="video-item set-bg" data-setbg="img/videos/video-2.jpg">
+                            <div class="vi-title">
+                                <h5>Video Games Playing With Imagination</h5>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=dhYOPzcsbGM" class="play-btn video-popup"><img
+                                    src="img/videos/play.png" alt=""></a>
+                            <div class="vi-time">11:13</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="video-item set-bg" data-setbg="img/videos/video-3.jpg">
+                            <div class="vi-title">
+                                <h5>Home Audio Recording For Everyone</h5>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=dhYOPzcsbGM" class="play-btn video-popup"><img
+                                    src="img/videos/play.png" alt=""></a>
+                            <div class="vi-time">11:13</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="video-item set-bg" data-setbg="img/videos/video-4.jpg">
+                            <div class="vi-title">
+                                <h5>What If They Let You Run The Hubble</h5>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=dhYOPzcsbGM" class="play-btn video-popup"><img
+                                    src="img/videos/play.png" alt=""></a>
+                            <div class="vi-time">11:13</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="video-item set-bg" data-setbg="img/videos/video-4.jpg">
+                            <div class="vi-title">
+                                <h5>What If They Let You Run The Hubble</h5>
+                            </div>
+                            <a href="https://www.youtube.com/watch?v=dhYOPzcsbGM" class="play-btn video-popup"><img
+                                    src="img/videos/play.png" alt=""></a>
+                            <div class="vi-time">11:13</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+Video Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section set-bg" data-setbg="img/footer-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="fs-logo">
+                        <div class="logo">
+                            <a href="./index.html"><img src="https://raw.githubusercontent.com/Tanuzzo14/Tanuzzo14.github.io/main/consolini-removebg-preview.png" alt=""></a>
+                        </div>
+                        <ul>
+                            <li><i class="fa fa-envelope"></i>gaetanosmario@gmail.com</li>
+                            <li><i class="fa fa-copy"></i>+39 3299270769</li>
+                            <li><i class="fa fa-thumb-tack"></i>Piazzale de Coubertin, 94100 Enna EN</li>
+                        </ul>
+                        <div class="fs-social">
+                            <li><a href="#calendar">Calendario</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright-option">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="co-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/Tanuzzo14" target="_blank">Gaetano Smario</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                        <div class="co-widget">
+                            <ul>
+                                <li><a href="#">Copyright notification</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="fa fa-close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/calendar.js"></script>
+
 </body>
+
 </html>
