@@ -1,4 +1,5 @@
 const calendar = document.getElementById("calendar");
+const calendarConsolini = document.getElementById("calendarConsolini");
 const today = new Date();
 const days = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
 const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
@@ -72,3 +73,44 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+
+function generateCalendar() {
+  calendarConsolini.innerHTML = "";
+
+  // Calendar Header
+  const calendarHeader = document.createElement("div");
+  calendarHeader.classList.add("calendar-header");
+  calendarHeader.textContent = `${months[today.getMonth()]} ${today.getFullYear()}`;
+  calendarConsolini.appendChild(calendarHeader);
+
+  // Calendar Days
+  const calendarDays = document.createElement("div");
+  calendarDays.classList.add("calendar-days");
+  days.forEach(day => {
+    const dayCell = document.createElement("div");
+    dayCell.classList.add("calendar-cell");
+    dayCell.textContent = day;
+    calendarDays.appendChild(dayCell);
+  });
+  calendarConsolini.appendChild(calendarDays);
+
+  // Calendar Cells
+  const daysInMonth = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+  for (let i = 0; i <= daysInMonth; i++) {
+    const dayCell = document.createElement("div");
+    dayCell.classList.add("calendar-cell");
+
+    const gameDate = new Date(today.getFullYear(), today.getMonth(), i);
+    dayCell.innerHTML = `<div class="game-date">${i}</div>`;
+
+    const game = games.find(g => g.date.toDateString() === gameDate.toDateString());
+    if (game) {
+      dayCell.innerHTML += `<div class="game-opponent">${game.opponent}</div>`;
+    }
+
+    calendarDays.appendChild(dayCell);
+  }
+}
+
+generateCalendar();

@@ -2612,6 +2612,66 @@ ol {
 		padding-right: 15px;
 	}
 }
+/*calendar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#calendarConsolini {
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calendar-header {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  color: #f2f2f2;
+}
+
+.calendar-cell {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.game-date {
+  font-weight: bold;
+  color: #f2f2f2;
+}
+
+.game-opponent {
+  color: #FF9933;
+}
+
+/* Responsive styles for mobile */
+@media only screen and (max-width: 600px) {
+  .calendar-days {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .calendar-cell {
+    font-size: 8px;
+    padding: 4px;
+  }
+
+  /* Style specific to Friday and Saturday */
+    background-color: #f2f2f2;
+  }
+}
 
 /* Small Mobile: 320px */
 
