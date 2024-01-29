@@ -602,9 +602,9 @@ ol {
 }
 .trending-news-section .tn-title {
 	font-size: 20px;
-	color: #ffffff;
+	color: #212529;;
 	font-weight: 500;
-	background: #dd1515;
+	background: #FF9933;
 	text-align: right;
 	padding-right: 75px;
 	padding-top: 14px;
@@ -640,6 +640,13 @@ ol {
 	font-weight: 500;
 	padding-left: 265px;
 }
+
+.nt-item {
+	 font-family: "Russo One";
+	}
+	.tn-title {
+	 font-family: "Russo One";
+	}
 
 /*---------------------
   Match Section
@@ -2699,16 +2706,16 @@ body {
   font-family: "Russo One";
   font-weight: normal;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
   font-stretch: normal;
   font-optical-sizing: none;
   line-height: initial;
   opacity: 1;
   transition-duration: 350ms;
-  font-size: 1em;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
 }
 
 
