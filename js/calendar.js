@@ -50,7 +50,7 @@ const nextGame = () => {
         const opponentText = `contro ${nextGame.opponent}`;
 
         if (daysUntil === 1) {
-            return `La prossima partita è domani! Arricampati! Giochiamo ${opponentText}`;
+            return `La prossima partita è <span class="elementor-heading-title" style="color: #FF9933;">domani!</span> Arricampati! Giochiamo  contro ${opponentText}`;
         }
 
         return `La prossima partita è il ${formattedDate} ${opponentText} tra ${daysUntil} giorni.`;
