@@ -536,6 +536,61 @@ ol {
 	margin-bottom: 32px;
 }
 
+
+
+.trending-games-section {
+	background: #151618;
+	position: relative;
+	padding: 18px 0;
+}
+.trending-games-section .tn-title {
+	font-size: 20px;
+	color: #ffffff;
+	font-weight: 500;
+	background: #FF9933;
+	text-align: right;
+	padding-right: 75px;
+	padding-top: 14px;
+	width: 32%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	z-index: 1;
+}
+
+.trending-games-section .games-slider.owl-carousel .owl-nav {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.trending-games-section .games-slider.owl-carousel .owl-nav button {
+	height: 22px;
+	width: 22px;
+	border: 1px solid #8a8b8c;
+	text-align: center;
+	font-size: 12px;
+	color: #ababab;
+	line-height: 22px;
+	margin-left: 10px;
+	background: #151618;
+}
+
+.trending-games-section .nt-item {
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 500;
+	padding-left: 265px;
+}
+
+.trending-games-section .games-slider .nt-item {
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 500;
+	padding-left: 265px;
+}
+
 /*---------------------
   Trending News
 -----------------------*/
@@ -545,7 +600,6 @@ ol {
 	position: relative;
 	padding: 18px 0;
 }
-
 .trending-news-section .tn-title {
 	font-size: 20px;
 	color: #ffffff;
@@ -2620,11 +2674,46 @@ body {
   box-sizing: border-box;
 }
 
+.elementor-heading-title {
+  color: #f2f2f2;
+  transition-property: opacity, transform;
+  font-family: "Russo One";
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-optical-sizing: none;
+  line-height: initial;
+  opacity: 1;
+  transition-duration: 350ms;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.elementor-heading-date {
+  color: #FF9933;
+  transition-property: opacity, transform;
+  font-family: "Russo One";
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-optical-sizing: none;
+  line-height: initial;
+  opacity: 1;
+  transition-duration: 350ms;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+
 #calendarConsolini {
   max-width: 600px;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -2675,7 +2764,14 @@ body {
 
 /* Small Mobile: 320px */
 
+	@media (max-width: 767px)
+.elementor-9 .elementor-element.elementor-element-92c102a .elementor-heading-title {
+    font-size: 1em;
+}
+
 @media only screen and (max-width: 479px) {
+
+
 	.club-content .cc-text .ct-widget ul li {
 		width: 100%;
 	}
@@ -2740,3 +2836,10 @@ body {
 		height: 410px;
 	}
 }
+
+iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+  }
+

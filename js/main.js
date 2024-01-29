@@ -75,6 +75,20 @@
         mouseDrag: false
     });
 
+        $(".games-slider").owlCarousel({
+        loop: true,
+        nav: true,
+        items: 1,
+        dots: false,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: true,
+        mouseDrag: false
+    });
+
     /*------------------------
 		Video Slider
     ----------------------- */

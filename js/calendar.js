@@ -1,5 +1,5 @@
 const calendar = document.getElementById("calendar");
-const calendarConsolini = document.getElementById("calendarConsolini");
+const gamesList = document.getElementById("calendarConsolini");
 const today = new Date();
 const days = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
 const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
@@ -35,23 +35,30 @@ const games = [
 ];
 
 const nextGame = () => {
- let nextGame = null;
- for (let i = 0; i < games.length; i++) {
- if (games[i].date > today) {
- nextGame = games[i];
- break;
- }
- }
- if (nextGame) {
- const daysUntil = Math.ceil((nextGame.date - today) / (1000 * 60 * 60 * 24));
- if (daysUntil == 1) {
-  return `La prossima partita è domani! Arricampati! Giochiamo contro contro ${nextGame.opponent}`;
- }
- return `La prossima partita è il ${nextGame.date.getDate()} ${months[nextGame.date.getMonth()]} contro ${nextGame.opponent} tra ${daysUntil} giorni.`;
- } else {
- return "Non ci sono partite in programma.";
- }
+    let nextGame = null;
+
+    for (let i = 0; i < games.length; i++) {
+        if (games[i].date > today) {
+            nextGame = games[i];
+            break;
+        }
+    }
+
+    if (nextGame) {
+        const daysUntil = Math.ceil((nextGame.date - today) / (1000 * 60 * 60 * 24));
+        const formattedDate = `<span class="elementor-heading-title" style="color: #FF9933;">${nextGame.date.getDate()} ${months[nextGame.date.getMonth()]}</span>`;
+        const opponentText = `contro ${nextGame.opponent}`;
+
+        if (daysUntil === 1) {
+            return `La prossima partita è domani! Arricampati! Giochiamo ${opponentText}`;
+        }
+
+        return `La prossima partita è il ${formattedDate} ${opponentText} tra ${daysUntil} giorni.`;
+    } else {
+        return "Non ci sono partite in programma.";
+    }
 };
+
 
 calendar.innerHTML = nextGame();
 
@@ -75,42 +82,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-function generateCalendar() {
-  calendarConsolini.innerHTML = "";
+function generateGamesList() {
+    gamesList.innerHTML = "";
 
-  // Calendar Header
-  const calendarHeader = document.createElement("div");
-  calendarHeader.classList.add("calendar-header");
-  calendarHeader.textContent = `${months[today.getMonth()]} ${today.getFullYear()}`;
-  calendarConsolini.appendChild(calendarHeader);
+    games.forEach(game => {
+        const gameItem = document.createElement("h3");
+        gameItem.classList.add("elementor-heading-title");
 
-  // Calendar Days
-  const calendarDays = document.createElement("div");
-  calendarDays.classList.add("calendar-days");
-  days.forEach(day => {
-    const dayCell = document.createElement("div");
-    dayCell.classList.add("calendar-cell");
-    dayCell.textContent = day;
-    calendarDays.appendChild(dayCell);
-  });
-  calendarConsolini.appendChild(calendarDays);
-
-  // Calendar Cells
-  const daysInMonth = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
-  for (let i = 0; i <= daysInMonth; i++) {
-    const dayCell = document.createElement("div");
-    dayCell.classList.add("calendar-cell");
-
-    const gameDate = new Date(today.getFullYear(), today.getMonth(), i);
-    dayCell.innerHTML = `<div class="game-date">${i}</div>`;
-
-    const game = games.find(g => g.date.toDateString() === gameDate.toDateString());
-    if (game) {
-      dayCell.innerHTML += `<div class="game-opponent">${game.opponent}</div>`;
-    }
-
-    calendarDays.appendChild(dayCell);
-  }
+        // Modifica qui per aggiungere il colore FF9933 alla data
+        const formattedDate = `<span style="color: #FF9933;">${formatDate(game.date)}</span>`;
+        
+        gameItem.innerHTML = `${game.opponent} - ${formattedDate}`;
+        gamesList.appendChild(gameItem);
+    });
 }
 
-generateCalendar();
+
+function formatDate(date) {
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    return date.toLocaleDateString('it-IT', options);
+}
+
+generateGamesList();
