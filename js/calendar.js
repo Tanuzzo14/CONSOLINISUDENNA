@@ -1,4 +1,4 @@
-const calendar = document.getElementById("calendar");
+const calendar = document.getElementById("nextMatch");
 const gamesList = document.getElementById("calendarConsolini");
 const today = new Date();
 const days = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
