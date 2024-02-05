@@ -1073,9 +1073,9 @@ ol {
 }
 
 .video-slider.owl-carousel .owl-nav button:hover {
-	background: #dd1515;
-	color: #ffffff;
-	border-color: #dd1515;
+    background: #FF9933;
+    color: #ffffff;
+    border-color: #FF9933;
 }
 
 .video-item {
