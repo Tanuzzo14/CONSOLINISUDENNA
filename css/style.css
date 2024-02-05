@@ -39,6 +39,10 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
+.responsive {
+  width: 60%;
+  height: auto;
+}
 
 h1,
 h2,
@@ -85,9 +89,7 @@ p {
 	margin: 0 0 15px 0;
 }
 
-img {
-	max-width: 50%;
-}
+
 
 input:focus,
 select:focus,
@@ -139,7 +141,7 @@ ol {
 	bottom: 0;
 	height: 3px;
 	width: 70px;
-	background: #dd1515;
+	background: #FF9933;
 	content: "";
 	z-index: 1;
 }
@@ -168,6 +170,8 @@ ol {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
+	  width: 100%;
+  height: auto;
 }
 
 .spad {
@@ -508,16 +512,21 @@ ol {
 -----------------------*/
 
 .hero-section {
-	height: 700px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+    height: 80vh;  /* Imposta l'altezza della sezione al 100% dell'altezza dello schermo */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    
+    /* Aggiungi stili per lo sfondo, se necessario */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
 }
 
 .hs-item .hs-text {
@@ -680,7 +689,7 @@ ol {
 	width: 200px;
 }
 
-.ms-content .mc-table table tr td img {
+.ms-content .mc-table table tr td  {
 	height: 30px;
 	width: 50px;
 }
@@ -1088,9 +1097,12 @@ ol {
 }
 
 .video-item .vi-title h5 {
-	color: #ffffff;
+	
 	font-weight: 500;
 	line-height: 26px;
+		  color: #151618;
+    transition-property: opacity, transform;
+    font-family: "Russo One";
 }
 
 .video-item .play-btn {
