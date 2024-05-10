@@ -100,7 +100,6 @@ function generateGamesList() {
     const gameItem = document.createElement("h3");
     gameItem.classList.add("elementor-heading-title")
     gameItem.innerHTML = `Non ci sono partite in calendario`;
-    console.log(gameItem)
     gamesList.appendChild(gameItem);
   }
 }
