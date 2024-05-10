@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function generateGamesList() {
     gamesList.innerHTML = "";
-
+    if(games<1){
     games.forEach(game => {
         const gameItem = document.createElement("h3");
         gameItem.classList.add("elementor-heading-title");
@@ -95,6 +95,13 @@ function generateGamesList() {
         gameItem.innerHTML = `${game.opponent} - ${formattedDate}`;
         gamesList.appendChild(gameItem);
     });
+  }
+  else{
+    const gameEmptyItem = document.createElement("h3");
+    gameEmptyItem.classList.add("elementor-heading-title")
+    gameEmptyItem.innerHTML = `Non ci sono partite in calendario`;
+    gamesList.appendChild(gameEmptyItem);
+  }
 }
 
 
