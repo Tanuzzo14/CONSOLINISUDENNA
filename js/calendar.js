@@ -1,4 +1,4 @@
-const calendar = document.getElementById("nextMatch");
+const calendar = document.getElementById("calendarConsolini");
 const gamesList = document.getElementById("calendarConsolini");
 const today = new Date();
 const days = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
@@ -100,6 +100,7 @@ function generateGamesList() {
     const gameItem = document.createElement("h3");
     gameItem.classList.add("elementor-heading-title")
     gameItem.innerHTML = `Non ci sono partite in calendario`;
+    console.log(gameItem)
     gamesList.appendChild(gameItem);
   }
 }
